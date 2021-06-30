@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Memory game</title>
+    </head>
+    <link rel ="stylesheet" href=" ./style.css">
+    
+    <body>
+        <h1 class = "deck-page-title"> Match the Pokemons </h1> 
+        <div class = "overlays-button visible">
+            <!-- <p class= "play"> ClickPlay</p> -->
+            <button class ="play"> Play </button>
+        </div>
+        <!-- <div class = "game-result">
+
+            
+        </div>        -->
+        <div class = "container">
+                
+            <div class = "game-details">
+
+                <div class = "game-info">
+                    Time: <span id = "time-taken">0</span>
+
+                </div>
+                <div class = "game-info">
+                    Moves: <span id = "moves-made">0</span>
+                </div>
+            </div>
+                
+
+            
+           <div class = "card" data-value = "pikachu">
+               <div class = "front-face teal" >
+                   <img class = "front" src="/Picture/pikachu.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "pikachu">
+               <div class = "front-face teal">
+                   <img class = "front" src="/Picture/pikachu.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "bullbasaur">
+               <div class = "front-face yellow">
+                   <img class = "front" src="/Picture/bullbasaur.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "bullbasaur">
+               <div class = "front-face yellow">
+                   <img class = "front" src="/Picture/bullbasaur.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "eevee">
+               <div class = "front-face red">
+                   <img class = "front" src="/Picture/eevee.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "eevee">
+               <div class = "front-face red">
+                   <img class = "front" src="/Picture/eevee.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "meowth">
+               <div class = "front-face grey">
+                   <img class = "front" src="/Picture/meowth.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "meowth">
+               <div class = "front-face grey">
+                   <img class = "front" src="/Picture/meowth.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "mankey">
+               <div class = "front-face crimson">
+                   <img class = "front" src="/Picture/mankey.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "mankey">
+               <div class = "front-face crimson">
+                   <img class = "front" src="/Picture/mankey.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "psyduck">
+               <div class = "front-face blue">
+                   <img class = "front" src="/Picture/psyduck.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "psyduck">
+               <div class = "front-face blue">
+                   <img class = "front" src="/Picture/psyduck.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "jigglypuff">
+               <div class = "front-face orange">
+                   <img class = "front" src="/Picture/jigglypuff.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "jigglypuff">
+               <div class = "front-face orange">
+                   <img class = "front" src="/Picture/jigglypuff.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "snorlax">
+               <div class = "front-face pink">
+                   <img class = "front" src="/Picture/snorlax.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "snorlax">
+               <div class = "front-face pink">
+                   <img class = "front" src="/Picture/snorlax.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "charmander">
+               <div class = "front-face green">
+                   <img class = "front" src="/Picture/charmander.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "charmander">
+               <div class = "front-face green">
+                   <img class = "front" src="/Picture/charmander.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "squirtle">
+               <div class = "front-face purple">
+                   <img class = "front" src="/Picture/squirtle.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           <div class = "card" data-value = "squirtle">
+               <div class = "front-face purple">
+                   <img class = "front" src="/Picture/squirtle.png">
+               </div>
+               <div class = "back-face">
+                   <img class = "back" src="/Picture/gaming.png">
+               </div>
+           </div>
+           
+            
+        </div>
+
+        <script src ="script.js"></script>
+    </body>
+</html>
