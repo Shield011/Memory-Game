@@ -1,4 +1,4 @@
-const button = document.querySelectorAll('overlays-button');
+
 const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -83,7 +83,3 @@ function resetBoard(){
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-button.forEach(button => button.addEventListener('click', () => {
-    button.classList.remove('visible');
-
-});
