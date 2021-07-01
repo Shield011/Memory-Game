@@ -9,39 +9,44 @@ let lockBoard = false;
 let firstCard, secondCard;
 let noOfFlips = 0;
 let counter = 0;
-
-function startTimer(){
-    var todayDate = new Date();
-    var timeR = todayDate.getSeconds();
-    var startTime = 0;
-    
-    console.log(timeR);
-
-}
-
-// let flips = document.getElementById('moves-made')
-
-// function startGame() {
-//     button.classList.remove('visible');
-// }
+var seconds = 0;
 
 
 function startGame (){
     document.getElementsByClassName('overlays-button')[0].style.display= 'none';
     shuffle();
-    startTimer();
+
+
+    
+    var elemenT = document.getElementById('time-taken');
+    function incrementSeconds() {
+        seconds += 1;
+        // el.innerText = "You have been here for " + seconds + " seconds.";
+        document.getElementById('time-taken').innerHTML = seconds;
+    
+    }
+    
+    var secondIncrement = setInterval(incrementSeconds, 1000);
+    
+   
 
 
 }
 
 
+   
+
 function flipCard(){
     if(lockBoard) return;
     if(this === firstCard) return;
     this.classList.add('flip');
+    
+    
+
     noOfFlips = noOfFlips + 1;
     // console.log(noOfFlips)
     document.getElementById('moves-made').innerHTML = noOfFlips;
+    
 
     
 
@@ -79,6 +84,7 @@ function checkForMatch() {
                 document.getElementsByClassName('game-result')[0].style.display='block';
                 document.getElementsByClassName('blur')[0].style.display='block';
                 document.getElementById('total-flips').innerHTML = noOfFlips;
+                document.getElementById('total-time').innerHTML = seconds;
             }, 500);
 
             }
@@ -151,12 +157,12 @@ function shuffle(){
 // }
 
 
-function reset(){
+// function reset(){
 
-    cards.forEach(card=>{
-    card.classList.remove('flip');
-    });
-}
+//     cards.forEach(card=>{
+//     card.classList.remove('flip');
+//     });
+// }
 
 
 function restartGame(){
@@ -164,20 +170,21 @@ function restartGame(){
 
     
     
-    document.getElementsByClassName('game-result')[0].style.display='none';
-    document.getElementsByClassName('blur')[0].style.display='none';
-    noOfFlips = 0;
-    document.getElementById('moves-made').innerHTML = noOfFlips;
+    // document.getElementsByClassName('game-result')[0].style.display='none';
+    // document.getElementsByClassName('blur')[0].style.display='none';
+    // noOfFlips = 0;
+    // document.getElementById('moves-made').innerHTML = noOfFlips;
 
     // document.getElementsByClassName('overlays-button')[0].style.display= 'block';
    
-
-    reset();
-    console.log("card reset done");
-    shuffle();
-    console.log("card shuffled");
-    flipCard();
-    console.log("card will be flipable");
+    document.location.href = "";
+    console.log("reset done")
+    // reset();
+    // console.log("card reset done");
+    // shuffle();
+    // console.log("card shuffled");
+    // flipCard();
+    // console.log("card will be flipable");
     
 
     
