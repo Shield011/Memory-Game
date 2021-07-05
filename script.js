@@ -1,7 +1,7 @@
 const startbtn = document.getElementsByClassName('overlays-button')[0].getElementsByTagName('button')[0];
 
 const restartbtn = document.getElementsByClassName('game-result')[0].getElementsByTagName('button')[0];
-// console.log(restartbtn)
+
 
 const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
@@ -63,14 +63,7 @@ function flipCard(){
         checkForMatch();
     }
 
-
-
 }
-
-
-
-        // console.log(firstCard.dataset.value);
-        // console.log(secondCard.dataset.value);
 
 function checkForMatch() {
         if(firstCard.dataset.value === secondCard.dataset.value){
@@ -87,25 +80,12 @@ function checkForMatch() {
                 document.getElementById('total-time').innerHTML = seconds;
             }, 500);
 
-            }
-
-
-            // endGame();
-
-            
-            
+            }    
         }
         else{
             unflipCards();
-
-    
-    }
-    
-
+        }
 } 
-
-
-//if match
 function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -114,8 +94,6 @@ function disableCards(){
     resetBoard();
 
 }
-
-//if not a match
 function unflipCards(){
     lockBoard =true;
     setTimeout(() => {
@@ -143,48 +121,11 @@ function shuffle(){
     });
 };
 
-// function endGame(){
-
-//     document.getElementsByClassName('game-result')[0].style.display='block';
-//     document.getElementsByClassName('blur')[0].style.display='block';
-//     document.getElementById('total-flips').innerHTML = noOfFlips;
-
-//     restartGame();
-
-    
-
-
-// }
-
-
-// function reset(){
-
-//     cards.forEach(card=>{
-//     card.classList.remove('flip');
-//     });
-// }
-
 
 function restartGame(){
-
-
-    
-    
-    // document.getElementsByClassName('game-result')[0].style.display='none';
-    // document.getElementsByClassName('blur')[0].style.display='none';
-    // noOfFlips = 0;
-    // document.getElementById('moves-made').innerHTML = noOfFlips;
-
-    // document.getElementsByClassName('overlays-button')[0].style.display= 'block';
    
     document.location.href = "";
     console.log("reset done")
-    // reset();
-    // console.log("card reset done");
-    // shuffle();
-    // console.log("card shuffled");
-    // flipCard();
-    // console.log("card will be flipable");
     
 
     
