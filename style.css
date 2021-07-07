@@ -9,16 +9,15 @@ body{
     margin: 0;
     background-image: url("/Picture/Pokibackground.png");
     object-fit: fill;
+    font-family: 'Frijole', cursive, serif;
 }
 .deck-page-title{
     color: #070707;
-    font-family: 'Frijole', cursive, serif;
     font-weight: normal;
     text-align: center;
     font-size: 50px;
 }
 .game-info{
-    font-family: 'Frijole', cursive, serif;
     color: #0e044b;
     font-size: 30px;
 }
@@ -86,7 +85,6 @@ img{
     background-color: #24ff10; 
     color: rgb(252, 248, 248);
     font-size: 50px;
-    font-family: 'Frijole', cursive, serif;
     padding: 16px 30px;
     border: none; 
     cursor: pointer;
@@ -192,14 +190,12 @@ img{
     text-align: center;
     align-items: center;
     z-index: 100;
-    font-family: 'Frijole', cursive, serif; 
+    
 } 
 .restart{
     background-color: #0284db; 
     color: rgb(252, 248, 248);
     font-size: 30px;
-    font-family: 'Frijole', cursive, serif;
-    
     padding: 16px 30px;
     border: none; 
     cursor: pointer;
