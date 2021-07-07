@@ -10,7 +10,6 @@ let seconds = 0;
 function startGame (){
     document.getElementsByClassName('overlays-button')[0].style.display= 'none';
     shuffle();   
-    let timeElement = document.getElementById('time-taken');
     function incrementSeconds() {
         seconds += 1;
         document.getElementById('time-taken').innerHTML = seconds;   
@@ -19,7 +18,7 @@ function startGame (){
 }
 function flipCard(){
     if(lockBoard) return;
-    if(this === firstCard) return;
+    if(this == firstCard) return;
     this.classList.add('flip');
     noOfFlips = noOfFlips + 1;
     document.getElementById('moves-made').innerHTML = noOfFlips;
